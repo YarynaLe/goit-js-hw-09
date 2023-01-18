@@ -35,26 +35,26 @@ const fp = flatpickr(myInput, options);  // функція flatpickr(selector, o
 function startTiming(selectedTime) {
     const timer  = {
         start() {
-            buttonStart.disabled = true;
-            myInput.disabled = true;
+        buttonStart.disabled = true;
+        myInput.disabled = true;
 
-            const startTime = selectedTime;
-           
+        const startTime = selectedTime;
+        
 
-            const timerID = setInterval(() => {
-                const currentTime = Date.now();
-                const deltaTime = startTime - currentTime;
-             
-                if (deltaTime >= 0) {
-                    const { days, hours, minutes, seconds } = convertMs(deltaTime);
-                   
-                    updateCkockFace({ days, hours, minutes, seconds });
-                } else {
-                    clearInterval(timerID);
-                    buttonStart.disabled = false;
-                    myInput.disabled = false;
-                }
-            }, 1000);
+    const timerID = setInterval(() => {
+        const currentTime = Date.now();
+        const deltaTime = startTime - currentTime;
+        
+        if (deltaTime >= 0) {
+            const { days, hours, minutes, seconds } = convertMs(deltaTime);
+            
+            updateCkockFace({ days, hours, minutes, seconds });
+        } else {
+            clearInterval(timerID);
+            buttonStart.disabled = false;
+            myInput.disabled = false;
+        }
+    }, 1000);
 
         }
     }
