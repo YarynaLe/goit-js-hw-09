@@ -31,7 +31,7 @@ const options = {
     },
 };
 
-const fp = flatpickr(myInput, options);  // функція flatpickr(selector, options)
+const fp = flatpickr(myInput, options);  
 
 function startTiming(selectedTime) {
     const timer  = {
