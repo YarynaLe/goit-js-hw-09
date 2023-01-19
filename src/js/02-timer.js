@@ -75,4 +75,3 @@ function pad(str) {
 }
 
 console.log('smth');
-console.log('smth');
